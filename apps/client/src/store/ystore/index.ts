@@ -59,6 +59,6 @@ export {
 function setupStore<T>(roomname: string, shape: unknown) {
   const store = syncedStore(shape as any) as T
   const doc = getYjsDoc(store)
-  const ws = new WebsocketProvider(`ws://${serverAddr}:${serverPort}`, roomname, doc)
+  const ws = new WebsocketProvider(`wss://${serverAddr}/ws/`, roomname, doc)
   return [store, ws] as const
 }

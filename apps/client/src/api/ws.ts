@@ -4,7 +4,8 @@ import { useUIStore } from '../store/ui'
 import { serverAddr, serverPort } from './endpoint'
 import { useBotStore } from '../store/bot'
 
-const ws = new WebSocket(`ws://${serverAddr}:${serverPort}`)
+const ws = new WebSocket(`wss://${serverAddr}/ws/`)
+
 const wsEmitter = mitt()
 
 ws.onopen = () => {
