@@ -27,7 +27,7 @@ const serverUrl = process.env.WS_SERVER_ADDR || 'localhost' // 如果通过该�
 const port = parseInt(process.env.WEB_PORT || '', 10) || 4175
 server.listen(port)
 
-const localhostUrl = `http://${serverUrl}:${port}`
+const localhostUrl = `https://${serverUrl}/`
 console.log(chalk.bold(`管理后台已启动，请使用浏览器访问 ${localhostUrl} 登录机器人`))
 ;(async () => {
   try {

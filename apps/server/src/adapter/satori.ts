@@ -14,7 +14,7 @@ export class Context extends SatoriContext {
     super()
     try {
       this.provide('http', undefined, true)
-      this.plugin(HTTP, { baseURL: `http://localhost:${httpPort}` })
+      this.plugin(HTTP, { baseURL: `https://paotuan.linhemin.com/wss` })
     } catch (e) {
       console.log(e)
     }
